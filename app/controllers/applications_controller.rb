@@ -23,7 +23,7 @@ class ApplicationsController < ApplicationController
     if application.save && no_missing_params
       redirect_to "/applications/#{application.id}"
     else
-      redirect_to "applications/new"
+      redirect_to "/applications/new"
       flash.alert = "Each field must be complete"
     end
   end
